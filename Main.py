@@ -1,5 +1,6 @@
 import pandas
 from GeneAssociations import GeneAssociations
+from PrimAlgorithm import PrimAlgorithm
 
 """!!!LEMBRETE!!!
 1. Fazer comentários (colocar em inglês)
@@ -11,8 +12,7 @@ E tambem instale o puglin 'anaconda terminal' aqui no VSCode"""
 
 class Main:
     #Turn CSV into DataFrame
-    infection_db = pandas.read_csv('database.csv') #essa é a nossa base completa
-    infection_db = pandas.read_csv('db.csv') #pode usar essa pra os testes menores
+    infection_db = pandas.read_csv('database.csv')
 
     #Database collected
     print('The following database shows the functional associations between the genes collected to find a cure:')
@@ -21,3 +21,9 @@ class Main:
     #Create graph
     gene_associations = GeneAssociations()
     gene_associations.add_gene_associations(infection_db)
+    infection_graph = gene_associations.graph
+
+    #Prim Algorithm
+    prim = PrimAlgorithm()
+    prim_MST = prim.MST_creation(infection_graph)
+    print(prim_MST)
