@@ -39,7 +39,6 @@ class Main:
     #Prints
     print(prim_MST)
     print(f"The time spent to analyze the database was: around {round((end_time - start_time), 3)} seconds.")
-    print(time_to_find_cure)
     print(f"During this pandemic, unfortunately {deaths} people died")
     time_printer(years, days, hours, minutes, seconds)
     if days <= 0:
