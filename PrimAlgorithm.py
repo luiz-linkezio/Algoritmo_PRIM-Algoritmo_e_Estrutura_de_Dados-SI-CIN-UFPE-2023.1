@@ -1,3 +1,5 @@
+import random
+
 class PrimAlgorithm:
     def __init__(self):
        self.MST = {} 
@@ -6,6 +8,8 @@ class PrimAlgorithm:
     def MST_creation(self, graph, current_vertex=0):
         visit_dic = {} #list of elements to be visited
         weight_list = [] #weights to be checked whether or not they should be removed from the visit dictionary
+        time_to_find_cure = 0 #time to find the cure
+        deaths = 0 #number of deaths
 
         self.MST[current_vertex] = [] #adds the initial vertex to the graph of the minimum spanning tree
         
@@ -30,8 +34,8 @@ class PrimAlgorithm:
             weight_list = self.remove_weight_visit(weight_list, visit_dic)
 
             #sort to find the lowest weight
-            sorted_visit_dic = sorted(visit_dic) 
-            visit_weight = sorted_visit_dic[0]
+            sorted_visit_dic = min(visit_dic) 
+            visit_weight = sorted_visit_dic
 
             #makes vertex changes 
             visited_vertex, current_vertex = visit_dic[visit_weight][0]
@@ -48,7 +52,18 @@ class PrimAlgorithm:
             self.MST[visited_vertex].append([current_vertex, visit_weight]) 
             self.MST[current_vertex].append([visited_vertex, visit_weight]) 
 
-        return self.MST
+            #Random things treatment
+            time_to_find_cure += 60*visit_weight*(random.uniform(0.75, 1.25)) #Total minutes to find the cure counter
+            deaths += random.randint(9000, 27000)/(len(self.MST)/10) #Total number of deaths counter
+            variant_chance = random.uniform(0.1,100.0)
+            if variant_chance <= 0.3:
+                deaths *= 1.25
+                time_to_find_cure *= 1.7
+            immunity_chance = random.uniform(0.01,100.0)
+            if immunity_chance <= 0.025:
+                time_to_find_cure /= 2
+
+        return self.MST, time_to_find_cure, int(deaths)
     
     #updates weight list
     def remove_weight_visit(self, weight_list, visit_dic): 
