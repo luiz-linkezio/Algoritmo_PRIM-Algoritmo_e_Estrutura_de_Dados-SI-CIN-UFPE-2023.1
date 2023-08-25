@@ -38,9 +38,9 @@ class Main:
     
     #Prints
     print(prim_MST)
-    print(f"The time spent to analyze the database was: around {round((end_time - start_time), 3)} seconds.")
-    print(f"During this pandemic, unfortunately {deaths} people died")
+    print(f"The time spent to analyze the database was: {int((end_time - start_time))} seconds.")
+    print(f"Unfortunately, during this pandemic {deaths} people died.")
     time_printer(years, days, hours, minutes, seconds)
     if days <= 0:
         days = 1
-    print(f"This mean that around {round(deaths/days)} people died per day while the cure was be in researching.")
+    print(f"As a result, approximately {int(deaths/days)} people died per day while the cure was being researched.")

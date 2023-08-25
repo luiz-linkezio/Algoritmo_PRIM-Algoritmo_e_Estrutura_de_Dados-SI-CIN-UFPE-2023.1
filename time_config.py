@@ -1,4 +1,4 @@
-def time_config(total_minutes): #If the total minutes time is longer or equal than a day duration
+def time_config(total_minutes): #If the total minutes is greater than or equal to a day
 
     if total_minutes >= (60*24*365):
         years = total_minutes / (60*24*365)
@@ -32,7 +32,7 @@ def time_config(total_minutes): #If the total minutes time is longer or equal th
 
         return 0, int(days), int(hours), int(minutes), round(seconds, 3)
 
-    elif total_minutes >= 60: #If the total minutes time is longer or equal than a hour duration
+    elif total_minutes >= 60: #If the total minutes time is greater than or equal to a hour
             
         hours = total_minutes / 60
         fractional_part = hours - int(hours)
@@ -44,7 +44,7 @@ def time_config(total_minutes): #If the total minutes time is longer or equal th
 
         return 0, 0, int(hours), int(minutes), round(seconds, 3)
 
-    elif total_minutes >= 1: #If the total minutes time is longer or equal than a second duration
+    elif total_minutes >= 1: #If the total minutes time is greater than or equal to a second
 
         minutes = total_minutes    
         fractional_part = minutes - int(minutes)
@@ -53,7 +53,7 @@ def time_config(total_minutes): #If the total minutes time is longer or equal th
 
         return 0, 0, 0, int(minutes), round(seconds, 3)
 
-    elif total_minutes < 1: #If the total minutes time is lesser than a second duration
+    elif total_minutes < 1: #If the total minutes is lower than a second
 
         seconds = total_minutes*60    
 
@@ -83,9 +83,9 @@ def time_printer(years, days, hours, minutes, seconds):
         times_list.append(f"{minutes} minutes")
 
     if seconds > 0 and seconds <= 1:
-        times_list.append(f"around {round(seconds, 3)} second")
+        times_list.append(f"{int(seconds)} second")
     elif seconds > 0:
-        times_list.append(f"around {round(seconds, 3)} seconds")
+        times_list.append(f"{int(seconds)} seconds")
 
 
     if len(times_list) > 1:
