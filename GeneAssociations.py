@@ -14,6 +14,3 @@ class GeneAssociations:
                 self.graph[gene2] = []
             self.graph[gene1].append([gene2, infection_degree])
             self.graph[gene2].append([gene1, infection_degree])
-    
-    def get_graph(self):
-        print(self.graph)
