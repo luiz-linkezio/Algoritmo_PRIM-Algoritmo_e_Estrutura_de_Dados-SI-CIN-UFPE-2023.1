@@ -2,7 +2,7 @@ import random
 
 class PrimAlgorithm:
     def __init__(self):
-       self.MST = {} 
+       self.MST = {}
 
     #creates a MST
     def MST_creation(self, graph, current_vertex=0):
