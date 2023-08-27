@@ -1,3 +1,4 @@
+<a name="readme-top"></a>
 # <p align="center">The Cure</p>
 
 > Project for the application of the Prim's Algorithm in the Algorithm and Data Structures course of the Information Systems (SI) at the Center for Informatics (CIN) - UFPE.
