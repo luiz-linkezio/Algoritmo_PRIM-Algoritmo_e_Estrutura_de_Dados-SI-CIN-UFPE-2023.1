@@ -3,7 +3,7 @@
 > Project for the application of the Prim's Algorithm in the Algorithm and Data Structures course of the Information Systems (SI) at the Center for Informatics (CIN) - UFPE.
 
 <details>
-  <summary>Menu</summary>
+  <summary>Table of Contents</summary>
   <details>
     <summary>English</summary>
     <ol>
@@ -103,6 +103,8 @@ C:\Program Files
 * Modify the path to the Gephi executable in the `Main.py` file if necessary
 * When `Gephi` initializes, some configurations will still be required. You can observe them from _Figure 4_ to _7_
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## Context
 
 ### Problem
@@ -115,9 +117,13 @@ To achieve this, scientists applied the Prim algorithm, a powerful minimum spann
 </br>
 Finally, after countless tries, sample collections, and days of intensive study, the foundational gene for the cure was found. With the discovery in hand, scientists could begin working on the solution. It was a complex and time-consuming process, but hope was rekindled. Gradually, the cure began to be distributed worldwide, and the pandemic came to an end.
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ### Database
 
 The database used in this work was the [SC-CC (Biological Networks)](https://networkrepository.com/bio-SC-CC.php), which contains information about functional associations between genes, including edge weights. To manipulate the database, the file was transformed into CSV format, and the data was separated into: Gene 1 (vertex 1), Gene 2 (vertex 2), and Degree of Infection (weight).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Implementation
 
@@ -149,11 +155,15 @@ Link to the repository:
 https://github.com/luiz-linkezio/Algoritmo_PRIM-Algoritmo_e_Estrutura_de_Dados-SI-CIN-UFPE-2023.1  
 ```
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## Conclusion
 
 The program uses the selected database in CSV format and converts it into a graph to find the minimum spanning tree through the Prim's Algorithm. The chosen database needed to be transformable into a connected, weighted, and undirected graph to ensure error-free processing.
 </br>
 Consequently, after processing the CSV file and forming the minimum spanning tree, the program calculates the number of pandemic deaths (total and per day) during the search process and how long it took to find the foundational gene for the cure. Following these results, the program provides a visualization of the minimum spanning tree graph using the Gephi software.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Screenshots
 
@@ -222,11 +232,15 @@ Consequently, after processing the CSV file and forming the minimum spanning tre
   <img alt="Visualização da Árvore Geradora Mínima (layout)" src="images/figure11.png" width="80%">
 </p>
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## Collaborators
 
 Dayane Lima - dayanecamilelima@gmail.com
 </br>
 Luiz Henrique - henriqueb999@yahoo.com.br
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ##
 
@@ -251,6 +265,8 @@ C:\Arquivos de Programas
 * Mude o caminho para o executável do Gephi no `Main.py` do código, se necessário
 * Quando for aberto o `Gephi`, ainda serão necessárias algumas configurações. Você pode observá-las da _Figura 4_ a _7_
 
+<p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
+
 ## Contexto
 
 ### Problema
@@ -263,9 +279,13 @@ Para isso, os cientistas aplicaram o algoritmo de Prim, uma ferramenta poderosa 
 </br>
 Finalmente, depois de inúmeras tentativas e erros, coletas de amostras e dias inteiros de estudo, foi encontrado o gene base para a cura. Com a descoberta em mãos, os cientistas puderam começar a trabalhar na produção da solução. Era um processo complexo e demorado, mas a esperança renasceu. Progressivamente, a cura começou a ser distribuída pelo mundo, e a pandemia foi cessada.
 
+<p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
+
 ### Banco de Dados
 
 A base de dados utilizada neste trabalho foi a [SC-CC (Biological Networks)](https://networkrepository.com/bio-SC-CC.php) que possui as informações das associações funcionais entre genes, contendo o peso nas arestas. Para a manipulação da base, foi transformado o arquivo para CSV e feito a separação dos dados em: Gene 1 (vértice 1), gene 2 (vértice 2) e Grau de Infecção (peso).
+
+<p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 
 ## Implementação
 
@@ -297,11 +317,15 @@ Link para o repositório:
 https://github.com/luiz-linkezio/Algoritmo_PRIM-Algoritmo_e_Estrutura_de_Dados-SI-CIN-UFPE-2023.1  
 ```
 
+<p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
+
 ## Conclusão
 
 O programa utiliza o banco de dados escolhido em formato CSV e o transforma em um grafo para encontrar a árvore geradora mínima por meio do Algoritmo de Prim. O banco selecionado necessitava poder ser transformado em um grafo conectado, com peso e não direcionado para que a busca ocorresse sem erros. 
 </br>
 Dessa forma, após o tratamento do arquivo CSV e formulação da árvore geradora mínima, é realizado o cálculo da quantidade de óbitos da pandemia (total e por dia) durante o processo de busca e quanto tempo levou para encontrar o gene base para formulação da cura. Após esses resultados, o programa apresenta uma visualização do grafo da árvore geradora mínima através do software Gephi.
+
+<p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 
 ## Capturas de Tela
 
@@ -370,8 +394,12 @@ Dessa forma, após o tratamento do arquivo CSV e formulação da árvore gerador
   <img alt="Visualização da Árvore Geradora Mínima (layout)" src="images/figure11.png" width="80%">
 </p>
 
+<p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
+
 ## Colaboradores
 
 Dayane Lima - dayanecamilelima@gmail.com
 </br>
 Luiz Henrique - henriqueb999@yahoo.com.br
+
+<p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
