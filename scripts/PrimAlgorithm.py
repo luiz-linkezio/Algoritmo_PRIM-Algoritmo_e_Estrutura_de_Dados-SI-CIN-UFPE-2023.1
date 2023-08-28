@@ -53,15 +53,10 @@ class PrimAlgorithm:
             self.MST[current_vertex].append([visited_vertex, visit_weight]) 
 
             #Random things treatment
-            time_to_find_cure += 60*visit_weight*(random.uniform(0.75, 1.25)) #Total minutes to find the cure counter
+            time_to_find_cure += 60*visit_weight #Total minutes to find the cure counter
             deaths += random.randint(9000, 27000)/(len(self.MST)/10) #Total number of deaths counter
-            variant_chance = random.uniform(0.1,100.0)
-            if variant_chance <= 0.3:
+            if random.uniform(0.1,100.0) <= 0.3:
                 deaths *= 1.25
-                time_to_find_cure *= 1.7
-            immunity_chance = random.uniform(0.01,100.0)
-            if immunity_chance <= 0.025:
-                time_to_find_cure /= 2
 
         return self.MST, time_to_find_cure, int(deaths)
     
