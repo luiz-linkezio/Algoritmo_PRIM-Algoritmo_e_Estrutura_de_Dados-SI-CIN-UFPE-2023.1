@@ -9,12 +9,12 @@ from scripts.CSV_data_generation import *
 from scripts.PrimAlgorithm import *
 
 class CureApp: #Main Class
-    def __init__(self, root):
-        self.root = root
-        self.root.title("The Cure")
-        self.root.geometry("800x480")
-        self.root.configure(bg="black")
-        self.root.resizable(False, False)
+    def __init__(self, screen):
+        self.screen = screen
+        self.screen.title("The Cure")
+        self.screen.geometry("800x480")
+        self.screen.configure(bg="black")
+        self.screen.resizable(False, False)
 
         self.current_screen = 0
         self.screens = [
@@ -44,8 +44,14 @@ class CureApp: #Main Class
         self.infection_graph = self.gene_associations.graph
 
         #Botton to initialize the song
-        play_music_button = tk.Button(root, text="Play Music", command=self.play_music)
-        play_music_button.pack(side="bottom")
+        play_music_button = tk.Button(
+            screen, 
+            text="Play Music", 
+            bg="black",
+            fg="#37B800",
+            font=("Terminal", 14, "bold"), 
+            command=self.play_music)
+        play_music_button.pack(side="bottom", pady=30)
 
         #Initialization of the mixer of pygame
         pygame.mixer.init()
@@ -94,7 +100,7 @@ class CureApp: #Main Class
 
     #Clear screen
     def clear_screen(self):
-        for widget in self.root.winfo_children():
+        for widget in self.screen.winfo_children():
             widget.destroy()
 
     #Foward to the next screen
@@ -109,7 +115,7 @@ class CureApp: #Main Class
     #Screens
     def opening_screen(self):
         label = tk.Label(
-            self.root,
+            self.screen,
             text="THE CURE",
             bg="black",
             fg="red",
@@ -118,7 +124,7 @@ class CureApp: #Main Class
         label.pack(fill="both", expand=True, padx=20, pady=100)
 
         label2 = tk.Label(
-            self.root,
+            self.screen,
             text="Press Enter to continue",
             bg="black",
             fg="#37B800",
@@ -126,12 +132,12 @@ class CureApp: #Main Class
         )
         label2.pack(fill="both", expand=True)
 
-        self.root.bind("<Return>", self.next_screen)
+        self.screen.bind("<Return>", self.next_screen)
 
     def second_screen(self):
 
         label1 = tk.Label(
-            self.root,
+            self.screen,
             text="THE CURE",
             bg="black",
             fg="#37B800",
@@ -140,7 +146,7 @@ class CureApp: #Main Class
         label1.pack(fill="both", expand=True, padx=20, pady=30)
 
         label2 = tk.Label(
-            self.root,
+            self.screen,
             text="The following database shows the functional associations between the genes collected to find the cure...",
             bg="black",
             fg="#37B800",
@@ -153,7 +159,7 @@ class CureApp: #Main Class
         # You can add a table or labels here to display the gene associations data
 
         continue_button = tk.Button(
-            self.root,
+            self.screen,
             text="Press Enter to continue",
             bd=0,
             bg="black",
@@ -171,7 +177,7 @@ class CureApp: #Main Class
             self.results = self.prim_start(int(self.initial_index))#Initializating prim algorithm for the data treatment
 
         label1 = tk.Label(
-            self.root,
+            self.screen,
             text="THE CURE",
             bg="black",
             fg="#37B800",
@@ -180,7 +186,7 @@ class CureApp: #Main Class
         label1.pack(fill="both", expand=True, padx=20, pady=30)
 
         label2 = tk.Label(
-            self.root,
+            self.screen,
             text="Enter a sample index from 0 to 2222 to start the analysis and wait for processing:",
             bg="black",
             fg="#37B800",
@@ -189,12 +195,12 @@ class CureApp: #Main Class
         )
         label2.pack(fill="both", expand=True, padx=20, pady=20)
 
-        entry = tk.Entry(self.root, bg="grey", font=("Terminal", 16))
+        entry = tk.Entry(self.screen, bg="grey", font=("Terminal", 16))
         entry.pack(fill="both", expand=True, padx=20, pady=10)
         entry.bind("<Return>", on_enter_pressed)  # Associar Enter à função
 
         continue_button = tk.Button(
-            self.root,
+            self.screen,
             text="Press Enter to continue",
             bd=0,
             bg="black",
@@ -208,7 +214,7 @@ class CureApp: #Main Class
     def last_screen(self):
         #Show some information about the pandemic and the prim algorithm
         label1 = tk.Label(
-            self.root,
+            self.screen,
             text="THE CURE",
             bg="black",
             fg="#37B800",
@@ -217,7 +223,7 @@ class CureApp: #Main Class
         label1.pack(fill="both", expand=True, padx=20, pady=30)
 
         label2 = tk.Label(
-            self.root,
+            self.screen,
             text=(
                 f"> Unfortunately, during this pandemic {self.results['pandemic_data']['deaths']} people died.\n\n" #deaths
                 f"> {self.results['time_to_find_cure']}\n\n" #time to find the cure
@@ -231,7 +237,7 @@ class CureApp: #Main Class
         label2.pack(fill="both", expand=True, padx=20, pady=50)
 
         continue_button = tk.Button(
-            self.root,
+            self.screen,
             text="Press Enter and wait to visualize the new graph",
             bd=0,
             bg="black",
@@ -243,6 +249,6 @@ class CureApp: #Main Class
 
 #Interface initilization
 if __name__ == "__main__":
-    root = tk.Tk()
-    app = CureApp(root)
-    root.mainloop()
+    screen = tk.Tk()
+    app = CureApp(screen)
+    screen.mainloop()

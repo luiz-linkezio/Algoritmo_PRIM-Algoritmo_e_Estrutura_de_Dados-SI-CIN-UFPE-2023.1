@@ -29,6 +29,7 @@
       <li>
         <a href="#screenshots">Screenshots</a>
         <ul>
+          <li><a href="#figure0">Figure 0</a></li>
           <li><a href="#figure1">Figure 1</a></li>
           <li><a href="#figure2">Figure 2</a></li>
           <li><a href="#figure3">Figure 3</a></li>
@@ -69,6 +70,7 @@
       <li>
         <a href="#capturas-de-tela">Capturas de Tela</a>
         <ul>
+          <li><a href="#figura0">Figura 0</a></li>
           <li><a href="#figura1">Figura 1</a></li>
           <li><a href="#figura2">Figura 2</a></li>
           <li><a href="#figura3">Figura 3</a></li>
@@ -96,6 +98,10 @@ Firstly, please ensure that you have met the following requirements (specific in
 * You have installed the `pandas` library using the following command:
 ```
 pip install pandas
+```
+* You have installed the `pygame` library using the following command:
+```
+pip install pygame
 ```
 * You have installed the `Gephi` software on your machine, in the following path (only necessary for visualizing the final minimum spanning tree):
 ```
@@ -145,6 +151,8 @@ Stages:
 
 - `Pandas`: We utilized the _pandas_ library for reading the CSV database, converting the file into a DataFrame, and exploring each item within the DataFrame to create the graph.
 
+- `Pygame`: We used the Pygame library for sound addition.
+
 - `Random`: We employed the _random_ library to generate random numbers during calculations for deaths. 
 
 - `Tkinter`: We applied the _tkinter_ library to create user graphical user interfaces (GUIs).
@@ -168,10 +176,16 @@ Consequently, after processing the CSV file and forming the minimum spanning tre
 
 ## Screenshots
 
+### <p id="figure0" align="center">Figure 0</p>
+
+<p align="center">
+    <img alt="Tela de Início" src="images/figure0.png" width="80%">
+</p>
+
 ### <p id="figure1" align="center">Figure 1</p>
 
 <p align="center">
-    <img alt="Database" src="images/figure1.png" width="80%">
+    <img alt="Segunda Tela" src="images/figure1.png" width="80%">
 </p>
 
 ### <p id="figure2" align="center">Figure 2</p>
@@ -259,6 +273,10 @@ Antes de começar, verifique se você atendeu aos seguintes requisitos (instruç
 ```
 pip install pandas
 ```
+* Você instalou a biblioteca `pygame` através da seguinte chamada:
+```
+pip install pygame
+```
 * Você instalou o software `Gephi` na sua máquina, no caminho (necessário apenas para conseguir visualizar árvore geradora mínima final):
 ```
 C:\Arquivos de Programas
@@ -307,6 +325,8 @@ Etapas:
 
 - `Pandas`: Utilizamos a biblioteca _pandas_ para leitura do banco de dados em CSV, transformação do arquivo em DataFrame e exploração de cada item do DataFrame para criação de grafo.
 
+- `Pygame`: Fizemos uso da biblioteca _pygame_ para adição de som.
+
 - `Random`: Usamos a biblioteca _random_ para gerar números aleatórios durante os cálculos de óbitos.
 
 - `Tkinter`: Aplicamos a biblioteca _tkinter_ para criar interfaces gráficas de usuário (GUI).
@@ -330,10 +350,16 @@ Dessa forma, após o tratamento do arquivo CSV e formulação da árvore gerador
 
 ## Capturas de Tela
 
+### <p id="figura0" align="center">Figura 0</p>
+
+<p align="center">
+    <img alt="Tela de Início" src="images/figure0.png" width="80%">
+</p>
+
 ### <p id="figura1" align="center">Figura 1</p>
 
 <p align="center">
-    <img alt="Database" src="images/figure1.png" width="80%">
+    <img alt="Segunda Tela" src="images/figure1.png" width="80%">
 </p>
 
 ### <p id="figura2" align="center">Figura 2</p>
