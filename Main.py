@@ -24,6 +24,10 @@ class CureApp: #Main Class
             self.last_screen,
         ]
 
+        #Icon
+        icon_path = "images\seven months forever.ico"  # Substitua pelo caminho do seu ícone
+        self.screen.iconbitmap(icon_path)
+
         #Algorithm results
         self.results = {}
         #Initial index/vertex (may be changed later)
@@ -174,6 +178,11 @@ class CureApp: #Main Class
         def on_enter_pressed(event=None):
             #Collecting the initial vertex/index to start the prim algorithm and gather data from it
             self.initial_index = entry.get()  #Getting the value entered by the user
+
+            #Handling invalid inputs
+            if (not isinstance(self.initial_index, int)) or (self.initial_index > 2222):
+                self.initial_index = 0
+
             self.results = self.prim_start(int(self.initial_index))#Initializating prim algorithm for the data treatment
 
         label1 = tk.Label(
@@ -187,7 +196,7 @@ class CureApp: #Main Class
 
         label2 = tk.Label(
             self.screen,
-            text="Enter a sample index from 0 to 2222 to start the analysis and wait for processing:",
+            text="Enter a sample index from 0 to 2222 to start the analysis and wait for processing(If you type something invalid, it will be replaced with a 0):",
             bg="black",
             fg="#37B800",
             wraplength=700,  # Limit the text width
