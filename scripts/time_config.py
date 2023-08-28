@@ -93,4 +93,5 @@ def time_printer(years, days, hours, minutes, seconds):
         times_string = ", ".join(time for time in times_list[:-1]) + " " + times_list[-1]    
     else:
         times_string = ", ".join(times_list)
-    print(f"The time spent to find the cure was: {times_string}.")
+    
+    return (f"The time spent to find the cure was: {times_string}.")
