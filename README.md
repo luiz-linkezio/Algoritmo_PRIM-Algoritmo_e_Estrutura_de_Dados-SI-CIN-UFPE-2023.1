@@ -253,7 +253,7 @@ Consequently, after processing the CSV file and forming the minimum spanning tre
 
 Dayane Lima - dayanecamilelima@gmail.com
 </br>
-Luiz Henrique - henriqueb999@yahoo.com.br
+Luiz Henrique - luizlinkezio@gmail.com.br
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -427,6 +427,6 @@ Dessa forma, após o tratamento do arquivo CSV e formulação da árvore gerador
 
 Dayane Lima - dayanecamilelima@gmail.com
 </br>
-Luiz Henrique - henriqueb999@yahoo.com.br
+Luiz Henrique - luizlinkezio@gmail.com.br
 
 <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
